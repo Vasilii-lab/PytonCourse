@@ -73,7 +73,7 @@ $$
 где нормальная составляющая вектора Пойнтинга:
 
 $$
-{\text{S_normal}} = \text{S_x}\sin(\phi) + \text{S_z} \cos(\phi)
+S_{\text{normal}} = S_x \sin(\phi) + S_z \cos(\phi)
 $$
 
 $$
@@ -87,7 +87,7 @@ E_z = -\frac{\eta_0}{\sqrt{\Omega}} A_{\text{amp}} \sin(\phi) e^{-j\Omega}
 $$
 
 $$
-E_x = \frac{A_{\text{amp}}^e}{\sqrt{\Omega}} e^{-j\Omega}
+E_x = \frac{A_{\text{amp}}^{e}}{\sqrt{\Omega}} e^{-j\Omega}
 $$
 
 $$
@@ -101,19 +101,19 @@ A_{\text{amp}} = -\frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos(\phi)}{(Z_s/
 $$
 
 $$
-A_{\text{amp}}^e = \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos(\phi) \cdot Z_s}{(Z_s/\eta_0) + \cos(\phi)}
+A_{\text{amp}}^{e} = \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos(\phi) \cdot Z_s}{(Z_s/\eta_0) + \cos(\phi)}
 $$
 
 ### 5. **Целевая функция оптимизации**
 Минимизируется функция:
 
 $$
-F = -\left[ \log_{10}\left(\frac{P_{\text{surface}}}{P_{\text{volume}}}\right) - \text{surface\_penalty} - \text{ratio\_penalty} \right]
+F = -\left[ \log_{10}\left(\frac{P_{\text{surface}}}{P_{\text{volume}}}\right) - \text{surface}\_\text{penalty} - \text{ratio}\_\text{penalty} \right]
 $$
 
 где:
-- $\text{surface\_penalty}$ — штраф за малую мощность поверхностной волны (${\text{P_surface}} < 10^{-9}$ Вт)
-- $\text{ratio\_penalty}$ — штраф за отношение меньше 1 ($P_{\text{surface}}/{\text{P_volume}} < 1$)
+- $\text{surface}\_\text{penalty}$ — штраф за малую мощность поверхностной волны ($P_{\text{surface}} < 10^{-9}$ Вт)
+- $\text{ratio}\_\text{penalty}$ — штраф за отношение меньше 1 ($P_{\text{surface}}/P_{\text{volume}} < 1$)
 
 ## 🚀 Инструкция по запуску
 1. Установите необходимые зависимости (см. ниже).

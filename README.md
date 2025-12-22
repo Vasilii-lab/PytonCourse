@@ -73,7 +73,7 @@ $$
 где нормальная составляющая вектора Пойнтинга:
 
 $$
-{\text{S_normal}} = S_x \sin(\phi) + S_z \cos(\phi)
+{\text{S_normal}} = \text{S_x}\sin(\phi) + \text{S_z} \cos(\phi)
 $$
 
 $$

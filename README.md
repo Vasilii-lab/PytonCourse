@@ -77,7 +77,7 @@ S_{\text{normal}} = S_x \sin(\phi) + S_z \cos(\phi)
 $$
 
 $$
-S_x = -\frac{1}{2} E_z H_y^*, \quad S_z = \frac{1}{2} E_x H_y^*
+S_x = -\frac{1}{2} E_z H_y^{*}, \quad S_z = \frac{1}{2} E_x H_y^{*}
 $$
 
 Компоненты поля для объёмной волны:

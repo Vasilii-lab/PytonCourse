@@ -108,12 +108,12 @@ $$
 Минимизируется функция:
 
 $$
-F = -\left[ \log_{10}\left(\frac{P_{\text{surface}}}{P_{\text{volume}}}\right) - P_{\text{surface\_penalty}} - P_{\text{ratio\_penalty}} \right]
+F = -\left[ \log_{10}\left(\frac{P_{\text{surface}}}{P_{\text{volume}}}\right) - \text{surface}\_\text{penalty} - \text{ratio}\_\text{penalty} \right]
 $$
 
 где:
-- $P_{\text{surface\_penalty}}$ — штраф за малую мощность поверхностной волны ($P_{\text{surface}} < 10^{-9}$ Вт)
-- $P_{\text{ratio\_penalty}}$ — штраф за отношение меньше 1 ($P_{\text{surface}}/P_{\text{volume}} < 1$)
+- $\text{surface}\_\text{penalty}$ — штраф за малую мощность поверхностной волны ($P_{\text{surface}} < 10^{-9}$ Вт)
+- $\text{ratio}\_\text{penalty}$ — штраф за отношение меньше 1 ($P_{\text{surface}}/P_{\text{volume}} < 1$)
 
 ## 🚀 Инструкция по запуску
 1. Установите необходимые зависимости (см. ниже).

@@ -39,7 +39,6 @@ $$k = \frac{2\pi}{\lambda}, \quad \Omega = kr, \quad C = \frac{I_0 k}{2\pi \eta}
 - \(r\) — расстояние до точки наблюдения
 
 ### 4. Поля поверхностной волны
-
 Вертикальная компонента электрического поля:
 
 $$E_{z} = jI_0 k \eta \frac{\cos(\tau)(1 + B \sin^2(\tau))}{-2jXA\cos(\tau) - 3B\eta \cos^2(\tau) + \eta(1 + B)} e^{-j\Omega \sin(\tau)}$$
@@ -49,7 +48,6 @@ $$E_{z} = jI_0 k \eta \frac{\cos(\tau)(1 + B \sin^2(\tau))}{-2jXA\cos(\tau) - 3B
 $$H_{y} = -2\pi jC \left[ \frac{\eta \cos(\tau)(1 + B \sin^2(\tau))}{\sin(\tau) \left( -2jXA\cos(\tau) - 3B\eta \cos^2(\tau) + \eta(1 + B) \right)} e^{-j\Omega \sin(\tau)} \right]$$
 
 ### 5. Поля объёмной волны
-
 Магнитное поле:
 
 $$H_y = -e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{\cos\tau}{\dfrac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
@@ -63,9 +61,9 @@ $$E_x = e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{Z_s(\tau) \co
 $$E_z = -\frac{\eta}{\sqrt{\Omega}} \left( \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos\tau}{\dfrac{Z_s(\tau)}{\eta} + \cos\tau} \right) \sin\tau \, e^{-j\Omega}$$
 
 ### 6. Мощность поверхностной волны
-Интегрирование по координате \(z\) (нормаль к поверхности):
+Поля экспоненциально затухают при удалении от поверхности. Интегрирование по координате \(z\) (нормаль к поверхности) с учётом множителя \(e^{-jkz\cos\tau}\):
 
-$$P_{\text{surface}} = 2\Re \left( \int_0^\infty \frac{1}{2} E_z H_y^* \, dz \right)$$
+$$P_{\text{surface}} = 2\Re \left( \int_0^\infty \frac{1}{2} \left( E_z e^{-jkz\cos\tau} \right) \left( H_y e^{-jkz\cos\tau} \right)^* dz \right)$$
 
 ### 7. Мощность объёмной волны
 Интегрирование по углу \(\phi\) в дальней зоне:
@@ -75,7 +73,6 @@ $$P_{\text{volume}} = \Re \left( \int_{-\pi/2}^{\pi/2} (S_x \sin\phi + S_z \cos\
 где компоненты вектора Пойнтинга:
 
 $$S_x = \frac{1}{2} E_z H_y, \quad S_z = \frac{1}{2} E_x H_y$$
-
 
 ## Инструкция по запуску
 1. Установите необходимые зависимости.

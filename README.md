@@ -80,11 +80,11 @@ $$S_x = \frac{1}{2} E_z H_y, \quad S_z = \frac{1}{2} E_x H_y$$
 
 Минимизируется функция:
 
-$$F = -\log_{10} \left( \frac{P_{\text{surface}}}{P_{\text{volume}}} \right) - \text{surface\_penalty} - \text{ratio\_penalty}$$
+$$F = -\log_{10} \left( \frac{P_{\text{surface}}}{P_{\text{volume}}} \right) - \left( \frac{\text{surface\_penalty}}{\text{ratio\_penalty}} \right)$$
 
 где:
 - \(\text{surface\_penalty}\) — штраф за малую мощность поверхностной волны (\(P_{\text{surface}} < 10^{-9}\) Вт)
-- \(\text{ratio\_penalty}\) — штраф за отношение меньше 1 (\(P_{\text{surface}}/P_{\text{volume}} < 1\))
+- \(\text{ratio\_penalty}\) — штраф за отношение меньше 1 (\(P_{\text{surface}} / P_{\text{volume}} < 1\))
 
 ## Инструкция по запуску
 1. Установите необходимые зависимости.

@@ -76,7 +76,8 @@ $$P_{\text{volume}} = \Re \left( \int_{-\pi/2}^{\pi/2} (S_x \sin\phi + S_z \cos\
 
 $$S_x = \frac{1}{2} E_z H_y, \quad S_z = \frac{1}{2} E_x H_y$$
 
-### 8. Целевая функция оптимизации
+# 8. Целевая функция оптимизации
+
 Минимизируется функция:
 
 $$F = -\log_{10} \left( \frac{P_{\text{surface}}}{P_{\text{volume}}} \right) - \text{surface\_penalty} - \text{ratio\_penalty}$$

@@ -8,7 +8,7 @@
 
 Расчёт мощностей выполняется на основе интегральных выражений для компонент поля. Оптимизация проводится в два этапа:
 1. Удовлетворение дисперсионного уравнения.
-2. Максимизация отношения P_surface / P_volume.
+2. Максимизация отношения \(P_{\text{surface}} / P_{\text{volume}}\).
 
 ## Используемые формулы
 
@@ -18,25 +18,25 @@
 $$Z_s = jX \frac{1 + A \sin^2(\tau)}{1 + B \sin^2(\tau)}$$
 
 где:
-- $X$ — реактивное сопротивление (Ом)
-- $A$, $B$ — безразмерные параметры формы
-- $\tau$ — комплексный угол распространения, определяемый из дисперсионного уравнения
+- \(X\) — реактивное сопротивление (Ом)
+- \(A\), \(B\) — безразмерные параметры формы
+- \(\tau\) — комплексный угол распространения, определяемый из дисперсионного уравнения
 
 ### 2. Дисперсионное уравнение
 Условие существования поверхностной волны:
 
 $$\cos^3(\tau) + \frac{jXA}{\eta B} \cos^2(\tau) + \frac{1 - B}{B} \cos(\tau) + \frac{jX(1 - A)}{\eta B} = 0$$
 
-где $\eta = 120\pi$ — волновое сопротивление свободного пространства.
+где \(\eta = 120\pi\) — волновое сопротивление свободного пространства.
 
 ### 3. Константы и параметры
 
 $$k = \frac{2\pi}{\lambda}, \quad \Omega = kr, \quad C = \frac{I_0 k}{2\pi \eta}$$
 
 где:
-- $I_0 = 1.0$ А — амплитуда тока
-- $\lambda$ — длина волны
-- $r$ — расстояние до точки наблюдения
+- \(I_0 = 1.0\) А — амплитуда тока
+- \(\lambda\) — длина волны
+- \(r\) — расстояние до точки наблюдения
 
 ### 4. Поля поверхностной волны
 
@@ -52,23 +52,23 @@ $$H_{y} = -2\pi jC \left[ \frac{\eta \cos(\tau)(1 + B \sin^2(\tau))}{\sin(\tau) 
 
 Магнитное поле:
 
-$$H_y = -e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{\cos\tau}{\frac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
+$$H_y = -e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{\cos\tau}{\dfrac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
 
 Горизонтальная компонента электрического поля:
 
-$$E_x = e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{Z_s(\tau) \cos\tau}{\frac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
+$$E_x = e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{Z_s(\tau) \cos\tau}{\dfrac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
 
 Вертикальная компонента электрического поля:
 
-$$E_z = -\frac{\eta}{\sqrt{\Omega}} \left( \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos\tau}{\frac{Z_s(\tau)}{\eta} + \cos\tau} \right) \sin\tau \, e^{-j\Omega}$$
+$$E_z = -\frac{\eta}{\sqrt{\Omega}} \left( \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos\tau}{\dfrac{Z_s(\tau)}{\eta} + \cos\tau} \right) \sin\tau \, e^{-j\Omega}$$
 
 ### 6. Мощность поверхностной волны
-Интегрирование по координате $z$ (нормаль к поверхности):
+Интегрирование по координате \(z\) (нормаль к поверхности):
 
 $$P_{\text{surface}} = 2\Re \left( \int_0^\infty \frac{1}{2} E_z H_y^* \, dz \right)$$
 
 ### 7. Мощность объёмной волны
-Интегрирование по углу $\phi$ в дальней зоне:
+Интегрирование по углу \(\phi\) в дальней зоне:
 
 $$P_{\text{volume}} = \Re \left( \int_{-\pi/2}^{\pi/2} (S_x \sin\phi + S_z \cos\phi) \, r d\phi \right)$$
 
@@ -82,8 +82,8 @@ $$S_x = \frac{1}{2} E_z H_y, \quad S_z = \frac{1}{2} E_x H_y$$
 $$F = -\log_{10} \left( \frac{P_{\text{surface}}}{P_{\text{volume}}} \right) - \text{surface\_penalty} - \text{ratio\_penalty}$$
 
 где:
-- $\text{surface\_penalty}$ — штраф за малую мощность поверхностной волны ($P_{\text{surface}} < 10^{-9}$ Вт)
-- $\text{ratio\_penalty}$ — штраф за отношение меньше 1 ($P_{\text{surface}}/P_{\text{volume}} < 1$)
+- \(\text{surface\_penalty}\) — штраф за малую мощность поверхностной волны (\(P_{\text{surface}} < 10^{-9}\) Вт)
+- \(\text{ratio\_penalty}\) — штраф за отношение меньше 1 (\(P_{\text{surface}}/P_{\text{volume}} < 1\))
 
 ## Инструкция по запуску
 1. Установите необходимые зависимости.

@@ -74,14 +74,12 @@ $$P_{\text{volume}} = \Re \left( \int_{-\pi/2}^{\pi/2} (S_x \sin\phi + S_z \cos\
 
 где компоненты вектора Пойнтинга:
 
-$$S_x = -\frac{1}{2} E_z \overline{H_y}, \quad S_z = \frac{1}{2} E_x \overline{H_y}$$
-
-Поля $E_x$, $E_z$, $H_y$ в выражении для $S_x$, $S_z$ определяются формулами раздела 5, в которых все тригонометрические функции зависят от $\tau$. Множители $\sin\phi$ и $\cos\phi$ перед $S_x$ и $S_z$ в интеграле возникают исключительно из геометрии интегрирования и не входят в выражения для полей.
+$$S_x = \frac{1}{2} E_z H_y, \quad S_z = \frac{1}{2} E_x H_y$$
 
 ### 8. Целевая функция оптимизации
 Минимизируется функция:
 
-$$F = -\left[ \log_{10}\left(\frac{P_{\text{surface}}}{P_{\text{volume}}}\right) - \text{surface\_penalty} - \text{ratio\_penalty} \right]$$
+$$F = -\log_{10} \left( \frac{P_{\text{surface}}}{P_{\text{volume}}} \right) - \text{surface\_penalty} - \text{ratio\_penalty}$$
 
 где:
 - $\text{surface\_penalty}$ — штраф за малую мощность поверхностной волны ($P_{\text{surface}} < 10^{-9}$ Вт)

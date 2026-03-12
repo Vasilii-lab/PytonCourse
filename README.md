@@ -49,19 +49,18 @@ $$E_{z} = jI_0 k \eta \frac{\cos(\tau)(1 + B \sin^2(\tau))}{-2jXA\cos(\tau) - 3B
 $$H_{y} = -2\pi jC \left[ \frac{\eta \cos(\tau)(1 + B \sin^2(\tau))}{\sin(\tau) \left( -2jXA\cos(\tau) - 3B\eta \cos^2(\tau) + \eta(1 + B) \right)} e^{-j\Omega \sin(\tau)} \right]$$
 
 ### 5. Поля объёмной волны
-Угол $\phi$ изменяется в пределах $[-\pi/2, \pi/2]$ при интегрировании.
 
 Магнитное поле:
 
-$$H_{y} = -e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{\cos(\phi)}{\frac{Z_s}{\eta} + \cos(\phi)} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
+$$H_y = -e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{\cos\tau}{\frac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
 
 Горизонтальная компонента электрического поля:
 
-$$E_{x} = e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{Z_s \cos(\phi)}{\frac{Z_s}{\eta} + \cos(\phi)} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
+$$E_x = e^{-j\Omega} \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \left( \frac{Z_s(\tau) \cos\tau}{\frac{Z_s(\tau)}{\eta} + \cos\tau} \cdot \frac{1}{\sqrt{\Omega}} \right)$$
 
 Вертикальная компонента электрического поля:
 
-$$E_{z} = -\frac{\eta}{\sqrt{\Omega}} \left( \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos(\phi)}{\frac{Z_s}{\eta} + \cos(\phi)} \right) \sin(\phi) e^{-j\Omega}$$
+$$E_z = -\frac{\eta}{\sqrt{\Omega}} \left( \frac{C\sqrt{2\pi}}{e^{-j\pi/4}} \cdot \frac{\cos\tau}{\frac{Z_s(\tau)}{\eta} + \cos\tau} \right) \sin\tau \, e^{-j\Omega}$$
 
 ### 6. Мощность поверхностной волны
 Интегрирование по координате $z$ (нормаль к поверхности):
@@ -76,6 +75,8 @@ $$P_{\text{volume}} = \Re \left( \int_{-\pi/2}^{\pi/2} (S_x \sin\phi + S_z \cos\
 где компоненты вектора Пойнтинга:
 
 $$S_x = -\frac{1}{2} E_z \overline{H_y}, \quad S_z = \frac{1}{2} E_x \overline{H_y}$$
+
+Поля $E_x$, $E_z$, $H_y$ в выражении для $S_x$, $S_z$ определяются формулами раздела 5, в которых все тригонометрические функции зависят от $\tau$. Множители $\sin\phi$ и $\cos\phi$ перед $S_x$ и $S_z$ в интеграле возникают исключительно из геометрии интегрирования и не входят в выражения для полей.
 
 ### 8. Целевая функция оптимизации
 Минимизируется функция:
